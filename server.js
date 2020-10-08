@@ -24,3 +24,4 @@ app.get("/api/config", (req, res) => {
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
+  
