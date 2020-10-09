@@ -1,9 +1,9 @@
 var express = require("express");
-var burger = require("../models/burger");
+var burgers = require("../models/burger");
 var router = express.Router();
 
 router.get("/", function (req, res) {
-    cat.all(function (data) {
+    burgers.all(function (data) {
         var hbsObject = {
             burgers: data
         };
@@ -12,15 +12,23 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/api/cats", function (req, res) {
+router.post("/", function (req, res) {
     burgers.create([
         "name", "devoured"
     ], [
-        req.body.name, req.body.devoured
-    ], function (result) {
+        req.body.name
+    ], function () {
         // Send back the ID of the new quote
-        res.json({ id: result.insertId });
+        res.redirect("/");
     });
 });
+
+router.put("/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
+    console.log("condition", condition);
+    burgers.update({ devoured: req.body.devoured }, condition, function () {
+      res.redirect("/");
+    });
+  });
 
 module.exports = router;

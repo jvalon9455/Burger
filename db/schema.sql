@@ -6,7 +6,8 @@
 --      * **devoured**: a boolean.
 
 -- CREATE DATABASE burgers_db;
-USE `h2r55vzutn5rngcq`;
+-- USE `h2r55vzutn5rngcq`;
+USE burgers_db;
 
 CREATE TABLE burgers
 (
