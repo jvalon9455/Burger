@@ -15,9 +15,9 @@ router.get("/", function (req, res) {
 router.post("/", function (req, res) {
     burgers.create([
         "name", "devoured"
-    ], [
+], [
         req.body.name
-    ], function () {
+    ], function (result) {
         // Send back the ID of the new quote
         res.redirect("/");
     });

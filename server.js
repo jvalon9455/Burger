@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+// const mysql = require("mysql");
 const exphbs = require("express-handlebars");
 const connection = require("./config/connection");
 
@@ -23,11 +23,11 @@ app.get("/", (req, res) => {
     res.render("index");
 })
 
-// app.get("/api/config", (req, res) => {
-//     res.json({
-//         success: true,
-//     })
-// });
+app.get("/api/config", (req, res) => {
+    res.json({
+        success: true,
+    })
+});
 
 // get routes to access server
 const routes = require ("./controllers/burgers_controllers")
