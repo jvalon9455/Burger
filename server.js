@@ -17,7 +17,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-    connection.query("SELECT * FROM burger", (err, data) => {
+    connection.query("SELECT * FROM burgers", (err, data) => {
         console.table(data);
     })
     res.render("index");
