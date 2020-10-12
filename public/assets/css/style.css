@@ -22,6 +22,11 @@ li {
     color:white;
     text-align: center;
   }
+
+  h3 {
+      color: white;
+      text-align: center;
+  }
   
   body {
     background-color: rgb(180, 147, 102);
@@ -36,14 +41,13 @@ li {
     margin-left: 20%;
   }
   
-  #leftSide {
-    
-  }
-  
-  #rightSide {
-   
-    
-  }
+.form-group {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
   
   #burgerPic {
     margin: auto;
