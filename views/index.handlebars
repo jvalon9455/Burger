@@ -1,38 +1,35 @@
-<h1>Welcome to Good Burger, Home of the Good Burger, May I Take Your Order?!</h1>
-
-<h2>Whataya Have?!</h2>
-
-<ul class = "red">
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Nom nom that burger!</h2>
-
-<ul class = "red">
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group red">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group red">
-    <label for="hungry">Hungry?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Waste of a good burger...SMH
-  </div>
-
-  <button type="submit">Add a Burger</button>
-</form>
+<main class="container">
+    
+    <h1>Good Burger</h1>
+    <div class=" row">
+        <section class="col-sm-5">
+            <h3>Burgers</h3>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </section>
+        <section class="col-sm-2"></section>
+        <section class="col-sm-5">
+            <h3>Burgers Eaten</h3>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </section>
+    </div>
+    <h3>Add Another Good Burger Here</h3>
+    <form class="create-form">
+        <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+        </div>
+        <button type='submit'>Submit</button>
+    </form>
+</main>

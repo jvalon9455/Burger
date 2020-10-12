@@ -1,0 +1,51 @@
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
+  h1 {
+    color:white;
+    text-align: center;
+  }
+  
+  body {
+    background-color: rgb(180, 147, 102);
+  }
+  
+  #mainSection {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #newBurger {
+    margin-left: 20%;
+  }
+  
+  #leftSide {
+    
+  }
+  
+  #rightSide {
+   
+    
+  }
+  
+  #burgerPic {
+    margin: auto;
+    display: block;
+  }

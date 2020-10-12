@@ -1,12 +1,6 @@
 <li>
     {{burger_name}}
-
-    {{#if devoured}}
-    <button class="change-devoured btn-success" data-id="{{id}}" data-newdevour="{{devoured}}">
-        Munch!
-    </button>{{/if}}
-
-    {{!-- <button class="delete-burger btn-danger" data-id="{{id}}">
-        {{#if devoured}}Im Full!{{else}}Poop loading...{{/if}}
-    </button> --
+    <button type="button " class="change-devoured" data-id="{{id}}" data-newdevour="{{devoured}}">
+        {{#if devoured}}<p>Devour me!</p>{{else}}Poop loading...{{/if}}
+    </button>
 </li>
